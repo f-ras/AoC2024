@@ -3,7 +3,7 @@ file = open("input.txt")
 input = file.read().split()
 file.close()
 
-# Create two seperate lists
+# Create two seperate lists and sort them
 list1 = []
 list2 = []
 i = 0
