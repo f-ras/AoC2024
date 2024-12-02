@@ -1,4 +1,3 @@
-
 file = open("input.txt")
 input = file.read().split()
 file.close()
