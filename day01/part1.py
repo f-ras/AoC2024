@@ -3,9 +3,9 @@ file = open("input.txt")
 input = file.read().split()
 file.close()
 
+# Create two seperate lists
 list1 = []
 list2 = []
-
 i = 0
 for x in input:
     if i % 2:
@@ -13,11 +13,10 @@ for x in input:
     else:
         list1.append(int(x))
     i += 1
-
-
 list1.sort()
 list2.sort()
 
+# Save distance between the two lists
 check = 0
 total = 0
 for x in list1:
