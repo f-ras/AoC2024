@@ -26,7 +26,7 @@ def	extract_uncorrupted_mul_instructions(input) -> list:
 	return uncorrupted_mul_instructions
 
 #Extract all instructions (mul, do and don't)
-def	extract_uncorrupted_instructions_complete(input) -> list:
+def	extract_all_uncorrupted_instructions(input) -> list:
 	uncorrupted_instructions = []
 	for index in range(len(input)):
 		if input[index:index+4] == "mul(":

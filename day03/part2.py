@@ -1,4 +1,4 @@
-from extractions import extract_uncorrupted_instructions_complete
+from extractions import extract_all_uncorrupted_instructions
 
 #Open files
 file = open("input.txt")
@@ -6,7 +6,7 @@ input = file.read()
 file.close()
 
 #Create lists
-uncorrupted_instructions = extract_uncorrupted_instructions_complete(input)
+uncorrupted_instructions = extract_all_uncorrupted_instructions(input)
 multiplies_to_execute = []
 
 #Filter out only mul-instructions after do()
