@@ -1,6 +1,6 @@
 
 #Extract mul instructions
-def	extract_mul_uncorrupted_instructions(input) -> list:
+def	extract_uncorrupted_mul_instructions(input) -> list:
 	uncorrupted_mul_instructions = []
 	for index in range(len(input)):
 		if input[index:index+4] == "mul(":

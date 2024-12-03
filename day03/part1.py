@@ -1,10 +1,10 @@
-from extractions import extract_mul_uncorrupted_instructions
+from extractions import extract_uncorrupted_mul_instructions
 
 file = open("input.txt")
 input = file.read()
 file.close()
 
-uncorrupted_mul_instructions = extract_mul_uncorrupted_instructions(input)
+uncorrupted_mul_instructions = extract_uncorrupted_mul_instructions(input)
 result = 0
 for instruction in uncorrupted_mul_instructions:
 	value = instruction.strip("mul()").split(',')
