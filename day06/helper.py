@@ -27,7 +27,7 @@ def	move_guard(input : list, GuardPosition : list, direction : str) -> int:
 		input[GuardPosition[Y]] = insert_in_str_at(GuardPosition[X], input[GuardPosition[Y]], 'X')
 		GuardPosition[Y] += y_move
 		GuardPosition[X] += x_move
-		if not input[GuardPosition[Y]][GuardPosition[X]] == WALL:
+		if not input[GuardPosition[Y]][GuardPosition[X]] == PATH:
 			moves += 1
 	return moves
 
