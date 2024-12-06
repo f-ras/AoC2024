@@ -18,7 +18,7 @@ while not is_guard_end_of_map(input, GuardPosition):
 	for direction in directions:
 		moves += move_guard(input, GuardPosition, direction)
 
-print(f"Final position {GuardPosition}")
 for line in input:
 	print(line)
+print(f"Final position {GuardPosition}")
 print(moves)
