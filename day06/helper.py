@@ -31,6 +31,26 @@ def	move_guard(input : list, GuardPosition : list, direction : str) -> int:
 			moves += 1
 	return moves
 
+#Not interfering with self - no path markings
+def	move_guard_pt2(input : list, GuardPosition : list, direction : str):
+	x_move = 0
+	y_move = 0
+	if direction == "NORTH":
+		y_move = -1
+	elif direction == "EAST":
+		x_move = 1
+	elif direction == "SOUTH":
+		y_move = 1
+	elif direction == "WEST":
+		x_move = -1
+	else:
+		return 0
+	while not is_guard_end_of_map(input, GuardPosition)\
+		and not input[GuardPosition[Y] + y_move][GuardPosition[X] + x_move] != GUARD\
+		and input[GuardPosition[Y] + y_move][GuardPosition[X] + x_move] != WALL:
+		GuardPosition[Y] += y_move
+		GuardPosition[X] += x_move
+
 def get_guard_position(input : list) -> list:
 	for y in range(len(input)):
 		for x in range(len(input[y])):
