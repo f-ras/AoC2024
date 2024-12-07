@@ -26,13 +26,9 @@ def is_guard_running_around_in_loops(input : list) -> bool:
 			move_guard_pt2(input, GuardPosition, direction)
 			if input[GuardPosition[Y]][GuardPosition[X]] == REPEATING_PATH:
 				path_repeats += 1
-				# print(f"repeat{path_repeats}")
-				# time.sleep(1)
-			else:
-				path_repeats = 0
-				# print(f"reset_repeat{path_repeats}")
-				# time.sleep(1)
-			if path_repeats >= 4:
+			# print(f"repeat{path_repeats}")
+			# time.sleep(1)
+			if path_repeats == 4:
 				return True
 	return False
 
