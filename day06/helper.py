@@ -32,6 +32,7 @@ def	move_guard(input : list, GuardPosition : list, direction : str) -> int:
 			moves += 1
 	return moves
 
+import time
 #Checking for path repeating
 def	move_guard_pt2(input : list, GuardPosition : list, direction : str):
 	x_move = 0
@@ -54,9 +55,6 @@ def	move_guard_pt2(input : list, GuardPosition : list, direction : str):
 			input[GuardPosition[Y]] = insert_in_str_at(GuardPosition[X], input[GuardPosition[Y]], PATH)
 		GuardPosition[Y] += y_move
 		GuardPosition[X] += x_move
-		# for line in input:
-		# 	print(line)
-		# time.sleep(0.2)
 
 def get_guard_position(input : list) -> list:
 	for y in range(len(input)):

@@ -26,8 +26,6 @@ def is_guard_running_around_in_loops(input : list) -> bool:
 			move_guard_pt2(input, GuardPosition, direction)
 			if input[GuardPosition[Y]][GuardPosition[X]] == REPEATING_PATH:
 				path_repeats += 1
-			# print(f"repeat{path_repeats}")
-			# time.sleep(1)
 			if path_repeats == 4:
 				return True
 	return False
@@ -42,11 +40,7 @@ for y in range(len(input)):
 		temp = input.copy()
 		temp[y] = insert_in_str_at(x, temp[y], WALL)
 		loops += is_guard_running_around_in_loops(temp)
-		for line in temp:
-			print(line)
 		print(loops)
-		print('\n')
-		# time.sleep(0.1)
 
 print(f"Final position {GuardPosition}")
-# print(loops)
+print(loops)
